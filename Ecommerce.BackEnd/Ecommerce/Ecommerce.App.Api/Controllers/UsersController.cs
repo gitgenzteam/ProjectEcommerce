@@ -30,7 +30,7 @@ namespace Ecommerce.App.Controllers
 
             return StatusCode(200, user);
         }
-        [HttpGet("Login/{user_name}/{password}")] 
+        [HttpGet("Login/{user_name}/{password}")]
         public IActionResult Login([FromRoute] string user_name, string password)
         {
             IDbConnection dbConnection = new MySqlConnection(connectionString);
@@ -106,6 +106,8 @@ namespace Ecommerce.App.Controllers
                 int user = dbConnection.Execute($"UPDATE user SET user_name = @in_username, password = @in_password,date_of_birth=@in_dateofbirth  WHERE user_id = @in_userid ", parametes);
                 return StatusCode(200);
             }
+
+
         }
     }
 }
