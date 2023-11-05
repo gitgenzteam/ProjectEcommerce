@@ -69,7 +69,7 @@ namespace Ecommerce.App.Controllers
                 parametes.Add("userIdString", user_id);
 
 
-                int user = dbConnection.Execute($"INSERT INTO user(user_id,user_name,password, date_of_birth) VALUE(@userIdString,@in_username,@in_password,@in_dateofbirth) ", parametes);
+                int user = dbConnection.Execute($"INSERT INTO user(user_id, user_name, password, date_of_birth) VALUE(@userIdString, @in_username, @in_password, @in_dateofbirth) ", parametes);
 
                 if (user > 0)
                     return StatusCode(200, true);
