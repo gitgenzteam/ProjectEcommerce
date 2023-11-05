@@ -69,4 +69,4 @@ $RECYCLE.BIN/
 *.sln.docstates
 
 # Visual Studio 2019 project folder
-.vs2019/
+.vs2022/
