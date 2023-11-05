@@ -89,7 +89,6 @@ namespace Ecommerce.App.Controllers
         [HttpPut("UpdateUser/{user_id}/{user_name}/{password}/{date_of_birth}")]
         public IActionResult UpdateUser([FromRoute] Guid user_id, string user_name, string password, DateTime date_of_birth)
         {
-
             IDbConnection dbConnection = new MySqlConnection(connectionString);
             var parametes = new DynamicParameters();
             parametes.Add("in_username", user_name);
