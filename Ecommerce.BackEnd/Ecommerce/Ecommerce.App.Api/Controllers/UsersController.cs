@@ -103,7 +103,7 @@ namespace Ecommerce.App.Controllers
             }
             else
             {
-                int user = dbConnection.Execute($"UPDATE user SET user_name = @in_username, password = @in_password,date_of_birth=@in_dateofbirth  WHERE user_id = @in_userid ", parametes);
+                int user = dbConnection.Execute($"UPDATE user SET user_name = @in_username, password = @in_password, date_of_birth=@in_dateofbirth  WHERE user_id = @in_userid ", parametes);
                 return StatusCode(200);
             }
         }
